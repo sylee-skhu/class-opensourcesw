@@ -30,6 +30,57 @@ Utterances는 GitHub Issues를 사용하여 댓글 기능을 구현하는 시스
 - **경량**: 가벼운 JavaScript 로딩으로 페이지 로딩 시간에 거의 영향을 주지 않습니다.
 - **빠른 로딩**: CDN을 통해 빠르게 로드되며 사용자 경험을 저하시키지 않습니다.
 
-## 결론
+---
 
-Utterances는 GitHub와 긴밀히 통합되어 개인정보 보호와 데이터 소유에 중점을 둔 사용자에게 특히 유용합니다. 오픈소스이며 무료로 사용할 수 있고, 댓글 시스템을 빠르고 쉽게 통합할 수 있는 장점이 있습니다. Disqus에 비해 다소 제한적인 기능을 가지고 있을 수 있지만, 광고 없는 깨끗한 인터페이스와 GitHub 기반의 인프라는 많은 개발자들에게 선호되는 선택입니다.
+# Utterances를 이용한 댓글 기능 추가하기
+
+Utterances는 GitHub Issues를 이용해 블로그 포스트에 댓글 기능을 추가할 수 있는 라이브러리입니다. 이 가이드는 GitHub Pages와 Jekyll에 Utterances를 적용하는 방법을 안내합니다.
+
+## 전제 조건
+
+- GitHub 계정이 있어야 합니다.
+- 해당 블로그의 GitHub 저장소가 있어야 합니다.
+- GitHub Pages로 호스팅 되는 Jekyll 블로그가 구축되어 있어야 합니다.
+
+## 1. Utterances 스크립트 설정
+
+1. **Utterances GitHub App 설치**: [Utterances GitHub App 페이지](https://github.com/apps/utterances)로 이동하여 GitHub 블로그 저장소에 대해 App을 설치합니다.
+
+2. **댓글을 위한 GitHub Issue 작성 방식 결정**: 댓글을 각각의 포스트에 해당하는 Issue로 관리할지, 또는 다른 기준으로 관리할지 결정해야 합니다.
+
+## 2. Utterances 스크립트 추가
+
+1. **Utterances 설정**: [Utterances 웹사이트](https://utteranc.es/)에서 원하는 설정을 선택합니다. 설정을 완료하면, HTML `<script>` 태그를 생성해 줍니다.
+
+2. **블로그 테마에 맞는 위치 선택**: 댓글을 표시하고자 하는 위치를 결정합니다. 대개 `_layouts/post.html` 파일 내에 적당한 위치를 찾습니다.
+
+3. **스크립트 태그 삽입**: 위에서 생성된 `<script>` 태그를 복사하여, 블로그 테마 파일의 선택한 위치에 붙여넣습니다.
+
+   예를 들어:
+
+   ```html
+   <script src="https://utteranc.es/client.js"
+           repo="github-username/github-repo" // 여기서는 블로그의 GitHub 저장소를 입력
+           issue-term="pathname" // 이 부분은 댓글이 달릴 Issue를 결정하는 방식을 설정
+           theme="github-light" // 사용할 테마를 설정
+           crossorigin="anonymous"
+           async>
+   </script>
+   ```
+
+## 3. 변경 사항 반영
+
+1. 변경 사항을 Git을 통해 커밋하고 GitHub 저장소에 푸시합니다.
+
+2. GitHub Pages가 자동으로 웹사이트를 재구성하도록 합니다.
+
+## 4. 블로그에서 댓글 기능 확인
+
+1. 블로그 포스트 페이지를 방문하여 Utterances 댓글 위젯이 정상적으로 작동하는지 확인합니다.
+
+2. 처음 댓글이 게시되면, GitHub 저장소에 해당 내용이 Issue로 생성됩니다.
+
+## 주의 사항
+
+- GitHub Pages 사이트는 public이어야 하며, 저장소의 Issues가 활성화되어 있어야 합니다.
+- 사용자가 댓글을 작성하려면 GitHub 계정이 있어야 합니다.
