@@ -1,3 +1,7 @@
 test3
+<<<<<<< HEAD
 error test
 amend test 
+=======
+error test
+>>>>>>> 3fce9123a8e44bd1366ceb9aaadab0200fb2be79
