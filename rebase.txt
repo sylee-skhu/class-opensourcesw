@@ -1,2 +1,3 @@
 리베이스를 공부하기 위해 만든 파일 입니다
 improt branchA as brA
+import main
