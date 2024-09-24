@@ -1,4 +1,8 @@
 리베이스를 실습하기 위한 파일
 import main
+<<<<<<< HEAD
 import branchA as brA
 import branchB as brB
+=======
+print("branch C 작업 완료)
+>>>>>>> b2f91bb (completed branchC)
