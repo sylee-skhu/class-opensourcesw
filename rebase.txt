@@ -1,3 +1,4 @@
 리베이스를 실습하기 위한 파일
 import main
 import branchA as brA
+import branchB as brB
