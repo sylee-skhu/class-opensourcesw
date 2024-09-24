@@ -1,0 +1,41 @@
+    1  git config --global user.name"Yonghyeon Lee"
+    2  git config--global user.name"Yonghyeon Lee"
+    3  git config --global user.name "Yonghyeon Lee"
+    4  git config --global user.name "yonghyeon412@gmail.com"
+    5  cd class-opensourcesw/
+    6  git status
+    7  git branch
+    8  vim rebase.txt
+    9  git add commit -m 'main import'
+   10  git branch brB
+   11  git branch brC
+   12  git branch
+   13  git checkout brB
+   14  git add rebase.txt 
+   15  git commit -m 'brenchB import'
+   16  git checkout brC
+   17  git add rebase.txt 
+   18  git commit -m 'completed branchC'
+   19  git checkout main
+   20  git merge brA
+   21  git merge brB
+   22  git add rebase.txt 
+   23  git commit -m 'resolve conflict brA'
+   24  git checkout brB
+   25  git rebase main
+   26  git add rebase.txt 
+   27  git commit -m 'mark resolution'
+   28  git checkout main
+   29  git merge branchB --no-ff
+   30  git merge brB
+   31  git checkout brC
+   32  git rebase main
+   33  git add rebase.txt 
+   34  git rebase --continue
+   35  git rebase --continue
+   36  git checkout main
+   37  git merge brC
+   38  git log --graph
+   39  git log --graph --decorate --online
+   40  git log --graph --decorate --oneline
+   41  history > history.txt
