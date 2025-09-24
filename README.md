@@ -2,4 +2,4 @@
 
 2024-2학기 시작!
 
-#Ex pull request
+#Ex pull requestgit remote 
